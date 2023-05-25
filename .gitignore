@@ -1,0 +1,43 @@
+node_modules/
+dicom_image/
+DicomFolder_Medium/
+data/
+mongoquery.js
+mongoquery.json
+import_mongoData/
+temp_zip/
+dicomtag.js
+dicom2.json
+nothingdo.js
+public/0753a31e3501ac19a9ebd98c73bfd629.html
+public/ec5a3b7dab14f96550ecdfb6b4c5adb3.html
+pm2log/
+imagingstudySchema.json
+models/FHIR/deleteReportEmpty.js
+models/FHIR/ImagingStudyInsertReport.js
+.vscode/
+models/FHIR/test.js
+*.ffs_db
+models/dcmtk/dcmtk-3.6.5-win64-dynamic
+api/dicom-xml/upload_xml/*.*
+temp/*
+!temp/temp.txt
+#ignore nodeV8 build
+build/
+
+#ignore dcmtk and compiled dcmtk
+dcmtk-build/
+models/dcmtk/linux-lib
+!models/dcmtk/dicom.dic
+
+#ignore pycache
+__pycache__/
+
+#ignore my temp scripts
+tempScript
+
+#ignore config file of front-end
+/public/scripts/config.js
+
+#ignore config file of pluginsConfig
+/plugins/config.js

@@ -1,0 +1,25 @@
+{
+  "name": "dicomdownloadtodicomdir7zip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin20888802/DICOMDownloadToDICOMDIR7zip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevin20888802/DICOMDownloadToDICOMDIR7zip/issues"
+  },
+  "homepage": "https://github.com/kevin20888802/DICOMDownloadToDICOMDIR7zip#readme",
+  "dependencies": {
+    "7zip-bin": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "fs-extra": "^11.1.1",
+    "node-7z": "^3.0.0"
+  }
+}
