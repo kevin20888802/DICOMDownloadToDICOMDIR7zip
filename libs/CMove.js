@@ -7,7 +7,7 @@ const path = require('path');
 function CMove(aeTitle, aePort, qrLevel, k, ip, aecTitle, aecPort) {
   return new Promise((resolve, reject) => {
 	const movescuPath = './movescu.exe';
-    const dicomFilesPath = './dicomFiles/';
+    const dicomFilesPath = './dicomFiles/IMAGE/';
 
     // 构建命令行参数数组
     const args = [

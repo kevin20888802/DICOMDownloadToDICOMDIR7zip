@@ -14,7 +14,7 @@ function generateRandomName(length) {
 
 async function createDICOMDIR() {
 	console.log("Creating DICOMDIR");
-  const dicomFolderPath = './dicomFiles';
+  const dicomFolderPath = './dicomFiles/';
   const dicomDirPath = path.resolve('./tmp/DICOMDIR');
 
   // 检查dicomFiles文件夹是否存在，如果不存在则创建它
@@ -24,7 +24,7 @@ async function createDICOMDIR() {
   }
 
   // 检查tmp文件夹是否存在，如果不存在则创建它
-  const tmpFolderPath = path.resolve('./tmp');
+  const tmpFolderPath = path.resolve('./tmp/');
   
 	if (!fs.existsSync(tmpFolderPath)) {
 		fs.mkdirSync(tmpFolderPath);
@@ -38,11 +38,11 @@ async function createDICOMDIR() {
 	console.log('Existing files in tmp folder deleted.');
 	}
 
-  const files = fs.readdirSync(dicomFolderPath);
+  const files = fs.readdirSync(dicomFolderPath + "/IMAGE");
   files.forEach((file) => {
-    const filePath = path.join(dicomFolderPath, file);
+    const filePath = path.join(dicomFolderPath  + "/IMAGE", file);
     const randomName = generateRandomName(8).toUpperCase();
-    const renamedFilePath = path.join(dicomFolderPath, randomName);
+    const renamedFilePath = path.join(dicomFolderPath  + "/IMAGE", randomName);
     fs.renameSync(filePath, renamedFilePath);
   });
 

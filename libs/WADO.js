@@ -27,7 +27,11 @@ function sendFileDownloadRequest(studyUID,seriesUID,objectUID,url) {
   const http = url.startsWith('https') ? require('https') : require('http');
   return new Promise((resolve, reject) => {
     http.get(url, (response) => {
-      const filename = `./dicomFiles/${studyUID}_${seriesUID}_${objectUID}.dcm`;
+		if (!fs.existsSync(`./dicomFiles/IMAGE/`)) {
+		  fs.mkdirSync(`./dicomFiles/IMAGE/`);
+		}
+		
+      const filename = `./dicomFiles/IMAGE/${studyUID}_${seriesUID}_${objectUID}.dcm`;
       const writer = fs.createWriteStream(filename);
 
       response.pipe(writer);
