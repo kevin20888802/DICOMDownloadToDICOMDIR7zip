@@ -9,7 +9,7 @@ function CMove(aeTitle, aePort, qrLevel, k, ip, aecTitle, aecPort) {
 	const movescuPath = './movescu.exe';
     const dicomFilesPath = './dicomFiles/IMAGE/';
 
-    // 构建命令行参数数组
+    // 構建命令行参数数组
     const args = [
       '--port', aePort,
       '-od', `${path.resolve(dicomFilesPath)}`,
@@ -23,7 +23,7 @@ function CMove(aeTitle, aePort, qrLevel, k, ip, aecTitle, aecPort) {
 	fs.mkdirSync(dicomFilesPath);
 	console.log('dicomFilesPath folder created.');
 	} else {
-	// 删除 tmp 文件夹内的所有文件
+	// 删除 tmp 資料夾内的所有文件
 	fs.readdirSync(dicomFilesPath).forEach((file) => {
 	  const filePath = path.join(dicomFilesPath, file);
 	  fs.unlinkSync(filePath);
@@ -31,7 +31,7 @@ function CMove(aeTitle, aePort, qrLevel, k, ip, aecTitle, aecPort) {
 	console.log('Existing files in dicomFilesPath folder deleted.');
 	}
 	
-    // 添加多个 k 参数
+    // 添加多個 k 參數
 	Object.entries(k).forEach(([key, value]) => {
 		args.push('-k');
 		args.push(`${key}=${value}`);
